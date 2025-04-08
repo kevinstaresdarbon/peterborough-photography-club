@@ -1,0 +1,690 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: bisque;
+}
+
+header {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 7;
+
+    & figure {
+
+        display: inline-block;
+        padding: 2rem;
+        background-color: rgb(116, 184, 184);
+        /* border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem; */
+
+        & .logo-img {
+            width: auto;
+            height: 272px;
+            object-fit: cover;
+            object-position: center;
+            border-top-left-radius: 2rem;
+            border-bottom-left-radius: 2rem;
+        }
+
+        & .logo-splash {
+            width: auto;
+            height: 272px;
+            object-fit: cover;
+            object-position: center;
+            border-top-right-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            opacity: 0.85;
+        }
+    }
+
+    & nav {
+
+        border: 3px solid rgb(116, 184, 184);
+        /* border-bottom-right-radius: 2rem;
+        border-bottom-left-radius: 2rem; */
+        background-color: antiquewhite;
+
+        & ul {
+            display: flex;
+            justify-content: space-between;
+            width: 893px;
+            padding: 2rem 0rem;
+            list-style: none;
+
+            & li {
+                padding: 0 2rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    
+}
+
+#meet-ups {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 16rem;
+    padding: 2rem 1.5rem;
+
+    font-size: 1.5rem;
+    line-height: 1.4;
+    background-color: bisque;
+
+    & h1 {
+        text-decoration: underline;
+        margin-bottom: 1.2rem;
+    }
+}
+
+#membership {
+
+    margin-bottom: 2rem;
+
+    & .membership-grid{
+        display: grid;
+        grid-template: repeat(12, 1fr) / repeat(20, 1fr);
+        border: 3px solid black;
+        min-height: 24rem;
+        justify-items: center;
+        align-items: center;
+        background-color: rgb(109, 202, 170);
+        opacity: 1;
+    
+        & .membership-title {
+            grid-area: 2 / 4 / 4 / 7;
+            color: white;
+            background-color: rgb(9, 15, 66);
+            z-index: 11;
+
+            & h1 {
+                display: inline-block;
+                font-size: 2.5rem;
+            }
+        }
+
+        & .palm-side {
+            grid-area: 1 / 1 / 10 / 6;
+
+            & .palm-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                overflow: hidden;
+                z-index: 3;
+                opacity: 1;
+            }
+        }
+
+        & .navy-rectangle {
+            grid-area: 2 / 3 / 4 / 8;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(9, 15, 66);
+            z-index: 10;
+        }
+
+        & .blue-rectangle {
+            grid-area: 3 / 5 / 11 / 18;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(48, 89, 136);
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        & .house-side {
+            grid-area: 7 / 15 / 12 / 20;
+            width: 100%;
+            height: 100%;
+            z-index: 8;
+
+            & .house-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                overflow: hidden;
+                opacity: 1;
+
+            }
+        }
+
+        & .green-rectangle-one {
+            grid-area: 11 / 1 / span 2 / span 3;
+            background-color: darkcyan;
+            width: 100%;
+            height: 100%;
+        }
+
+        & .green-rectangle-two {
+            grid-area: 2 / 17 / span 2 / span 3;
+            background-color: darkcyan;
+            width: 100%;
+            height: 100%;
+        } 
+
+        & .bisque-blurb {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            grid-area: 4 / 7 / 10 / 16;
+            width: 100%;
+            height: 100%;
+            padding: 2rem;
+            font-size: 1.5rem;
+            background-color: bisque;
+            z-index: 8;
+
+            & button {
+                font-size: 1rem;
+                width: 60%;
+                height: 2.5rem;
+            }
+        }
+    }
+} 
+    
+#competitions {
+
+    & .competitions-grid{
+        display: grid;
+        grid-template: repeat(12, 1fr) / repeat(20, 1fr);
+        border: 3px solid black;
+        min-height: 24rem;
+        justify-items: center;
+        align-items: center;
+        background-color: rgb(109, 202, 170);
+        opacity: 1;
+    
+        & .competition-title {
+            grid-area: 2 / 4 / 4 / 7;
+            color: white;
+            background-color: rgb(9, 15, 66);
+            z-index: 11;
+
+            & h1 {
+                display: inline-block;
+                font-size: 2.5rem;
+            }
+        }
+
+        & .tram-side {
+            grid-area: 5 / 1 / span 7 / 6;
+            z-index: 9;
+
+            & .tram-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                overflow: hidden;
+                opacity: 1;
+            }
+        }
+
+        & .navy-rectangle {
+            grid-area: 2 / 3 / 4 / 8;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(9, 15, 66);
+            z-index: 10;
+        }
+
+        & .blue-rectangle {
+            grid-area: 3 / 5 / 11 / 18;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(48, 89, 136);
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        & .garage-side {
+            grid-area: 2 / 16 / 7 / 21;
+            width: 100%;
+            height: 100%;
+            z-index: 11;
+
+            & .garage-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                overflow: hidden;
+                opacity: 1;
+
+            }
+        }
+
+        & .green-rectangle-one {
+            grid-area: 1 / 1 / span 2 / span 3;
+            background-color: darkcyan;
+            width: 100%;
+            height: 100%;
+        }
+
+        & .jungle {
+            grid-area: 10 / 17 / span 3 / span 4;
+            background-color: darkcyan;
+            width: 100%;
+            height: 100%;
+
+            & .jungle-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                overflow: hidden;
+                opacity: 1;
+
+            }
+        } 
+
+        & .bisque-blurb {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            grid-area: 4 / 7 / 10 / 16;
+            width: 100%;
+            height: 100%;
+            padding: 2rem 3.5rem;
+            font-size: 1.5rem;
+            background-color: bisque;
+            z-index: 8;
+
+            & ul {
+                padding: 0 2rem;
+            }
+
+            & button {
+                font-size: 1rem;
+                width: 60%;
+                height: 2.5rem;
+            }
+        }
+    }
+} 
+
+footer {
+    display: flex;
+    min-height: 5rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+    
+@media only screen and (min-width: 461px) and (max-width: 900px){
+
+    header {
+    
+        padding: 0;
+
+        & figure {
+
+            padding: 1rem 0.5rem;;
+
+            & .logo-img {
+                height: 142px;
+            }
+
+            & .logo-splash {
+                height: 142px;
+            }
+        }
+
+        & nav {
+
+            & ul {
+                width: 447px;
+                
+                & li {
+                    padding: 0 .25rem;
+                }
+            }
+        }
+    }
+
+    #membership {
+
+        & .membership-grid {
+
+            grid-template: repeat(11, 1fr) / repeat(12, 1fr);
+            justify-items: center;
+
+            & .membership-title {
+                grid-area: 1 / 1 / 2 / 8;
+                color: white;
+                background-color: rgb(9, 15, 66);
+                z-index: 11;
+    
+                & h1 {
+                    display: inline-block;
+                    font-size: 2.5rem;
+                }
+            }
+    
+            & .palm-side {
+               display: none;
+            }
+    
+            & .navy-rectangle {
+                grid-area: 1 / 1 / 2 / 8;
+            }
+    
+            & .blue-rectangle {
+                grid-area: 1 / 1 / 12 / 12;
+            }
+    
+            & .house-side {
+                grid-area: 7 / 2 / 11 / 12;
+    
+                & .house-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    overflow: hidden;
+                    opacity: 1;
+    
+                }
+            }
+    
+            & .green-rectangle-one {
+                grid-area: 10 / 1 / span 2 / span 3;
+            }
+    
+            & .green-rectangle-two {
+                display: none;
+            } 
+    
+            & .bisque-blurb {
+                grid-area: 2 / 2 / 7 / 12;
+                font-size: 1.5rem;
+                
+                & ul {
+                    padding: 0 1rem;
+                }
+
+                & button {
+                    font-size: 1rem;
+                    width: 60%;
+                    height: 2.5rem;
+                }
+            }
+        } 
+    }
+
+    #competitions {
+
+        & .competitions-grid {
+
+            grid-template: repeat(11, 1fr) / repeat(12, 1fr);
+            justify-items: center;
+
+            & .competition-title {
+                grid-area: 1 / 1 / 2 / 8;
+                color: white;
+                background-color: rgb(9, 15, 66);
+                z-index: 11;
+    
+                & h1 {
+                    display: inline-block;
+                    font-size: 2.5rem;
+                }
+            }
+    
+            & .tram-side {
+               display: none;
+            }
+    
+            & .navy-rectangle {
+                grid-area: 1 / 1 / 2 / 8;
+            }
+    
+            & .blue-rectangle {
+                grid-area: 1 / 1 / 12 / 12;
+            }
+    
+            & .garage-side {
+                grid-area: 7 / 2 / 11 / 12;
+    
+                & .house-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    overflow: hidden;
+                    opacity: 1;
+    
+                }
+            }
+
+            & .jungle {
+                display: none;
+            }
+    
+            & .green-rectangle-one {
+                grid-area: 10 / 1 / span 2 / span 3;
+            }
+    
+            & .green-rectangle-two {
+                display: none;
+            } 
+    
+            & .bisque-blurb {
+                grid-area: 2 / 2 / 7 / 12;
+                font-size: 1.5rem;
+                padding: 0;
+
+                & button {
+                    font-size: 1rem;
+                    width: 60%;
+                    height: 2.5rem;
+                }
+            }
+        } 
+    }
+}
+
+@media only screen and (max-width: 460px){
+
+    header {
+    
+        padding: 0;
+
+        & figure {
+
+            padding: 1rem 0.5rem;;
+
+            & .logo-img {
+                display: none;
+            }
+
+            & .logo-splash {
+                height: 152px;
+            }
+        }
+
+        & nav {
+
+            & ul {
+                width: 315px;
+                
+                & li {
+                    padding: 0 .25rem;
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+
+    #membership {
+
+        margin-bottom: 2rem;
+
+        & .membership-grid {
+
+            grid-template: repeat(9, 1fr) / repeat(10, 1fr);
+            justify-items: center;
+
+            & .membership-title {
+                grid-area: 1 / 1 / 2 / 8;
+                color: white;
+                background-color: rgb(9, 15, 66);
+                z-index: 11;
+    
+                & h1 {
+                    display: inline-block;
+                    font-size: 2.5rem;
+                }
+            }
+    
+            & .palm-side {
+               display: none;
+            }
+    
+            & .navy-rectangle {
+                grid-area: 1 / 1 / 2 / 8;
+            }
+    
+            & .blue-rectangle {
+                grid-area: 1 / 1 / 12 / 12;
+            }
+    
+            & .house-side {
+                grid-area: 7 / 3 / 10 / 11;
+    
+                & .house-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    overflow: hidden;
+                    opacity: 1;
+    
+                }
+            }
+    
+            & .green-rectangle-one {
+                grid-area: 1 / 9 / 2 / 11;
+                z-index: 10;
+            }
+    
+            & .green-rectangle-two {
+                grid-area: 8 / 9 / 10 / 11;
+                z-index: 10;
+                background-color: aquamarine;
+                width: 100%;
+                height: 100%;
+            } 
+    
+            & .bisque-blurb {
+                grid-area: 2 / 2 / 7 / 10;
+                font-size: 1rem;
+                
+                & ul {
+                    padding: 0 1.5rem;
+                }
+
+                & button {
+                    font-size: 1rem;
+                    width: 60%;
+                    height: 2.5rem;
+                }
+            }
+        } 
+    }
+
+    #competitions {
+
+        & .competitions-grid {
+
+            grid-template: repeat(9, 1fr) / repeat(10, 1fr);
+            justify-items: center;
+
+            & .competition-title {
+                grid-area: 1 / 1 / 2 / 8;
+                color: white;
+                background-color: rgb(9, 15, 66);
+                z-index: 11;
+    
+                & h1 {
+                    display: inline-block;
+                    font-size: 2.5rem;
+                }
+            }
+    
+            & .tram-side {
+               display: none;
+            }
+    
+            & .navy-rectangle {
+                grid-area: 1 / 1 / 2 / 8;
+            }
+    
+            & .blue-rectangle {
+                grid-area: 1 / 1 / 10 / 11;
+            }
+    
+            & .garage-side {
+                grid-area: 7 / 2 / 10 / 9;
+    
+                & .house-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    overflow: hidden;
+                    opacity: 1;
+    
+                }
+            }
+
+            & .jungle {
+                display: none;
+            }
+    
+            & .green-rectangle-one {
+                grid-area: 1 / 9 / 2 / 11;
+                z-index: 10;
+            }
+    
+            & .green-rectangle-two {
+                grid-area: 8 / 9 / 10 / 11;
+                z-index: 10;
+                background-color: aquamarine;
+                width: 100%;
+                height: 100%;
+            } 
+    
+            & .bisque-blurb {
+                grid-area: 2 / 2 / 7 / 11;
+
+                font-size: 1rem;
+                padding: 0;
+
+                & button {
+                    font-size: 1rem;
+                    width: 60%;
+                    height: 2.5rem;
+                }
+            }
+        } 
+    }
+}
